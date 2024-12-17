@@ -1,0 +1,11 @@
+# Set the base image
+FROM docker.io/alpine
+
+# Create the working directory
+WORKDIR /usr/app
+
+# Run the install command
+RUN apk add --update redis
+
+#The command to run on container startup
+CMD ["redis-server"]
